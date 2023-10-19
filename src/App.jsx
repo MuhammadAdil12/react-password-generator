@@ -53,16 +53,16 @@ function App() {
           onClick={copyPassword}
         className='outline-none bg-gray-600 px-3 py-1 shrink-0 h-10 my-auto mx-3 rounded-lg'>Copy</button>
       </div>
-      <div className='flex text-sm gap-x-2 py-4 justify-evenly'>
+      <div className='flex text-sm gap-x-2 py-4 justify-evenly align-middle'>
         <div className='flex item-center gap-x-1 '>
           <input type="range"
           min={6}
           max={50}
           value={length}
-          className='cursor-pointer'
+          className='cursor-pointer w-20 md:w-40'
           onChange={(e) => {setLength(e.target.value)}} 
           />
-          <label className='text-lg pl-1'>Length: {length}</label>
+          <label className='sm:text-sm md:text-lg pl-1'>Length: {length}</label>
         </div>
         <div className='flex item-center gap-x-1'>
           <input type="checkbox"
@@ -71,7 +71,7 @@ function App() {
               onChange={() =>{
                 setNumAllowed((prev) => !prev)
               }} />
-          <label htmlFor='numberInput' className='text-lg pl-1'>Number</label>
+          <label htmlFor='numberInput' className='sm:text-sm md:text-lg pl-1'>Number</label>
         </div>
         <div className='flex item-center gap-x-1'>
           <input type="checkbox"
@@ -80,7 +80,7 @@ function App() {
               onChange={() =>{
                 setCharAllowed((prev) => !prev)
               }} />
-          <label htmlFor='characterInput' className='text-lg pl-1'>Character</label>
+          <label htmlFor='characterInput' className='sm:text-sm md:text-lg pl-1'>Character</label>
         </div>
       </div>
     </div>
